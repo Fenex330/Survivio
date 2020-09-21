@@ -41,7 +41,13 @@ file (COPY "res" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/bin")
 
 include_directories ("include")
 include_directories (SYSTEM ${SFML_INCLUDE_DIR})
-link_directories (SFML_LIBRARY_DIR)
+
+if (APPLE)
+     link_directories (${SFML_LIBRARY_DIR})
+else()
+    link_directories (SFML_LIBRARY_DIR)
+endif()
+
 file (GLOB SRC_FILES "src/*.cpp")
 
 add_executable (Survivio ${SRC_FILES})
