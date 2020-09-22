@@ -1,1 +1,9 @@
 Add Multiplayer support
+test on windows and mac
+if compiling cross-platform successfully - tag master branch
+copy main executable to bin/
+specify custom compiler
+rename windows "bin" to "lib"
+package binaries with cpack
+try static linking (from custom sfml build)
+on windows try: codeblocks, codelite, mingw, VS, ninja, makefiles
