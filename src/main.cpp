@@ -6,7 +6,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(800, 800), "Main Menu");
     
     window.setVerticalSyncEnabled(true);
-    window.setKeyRepeatEnabled(false);
+    window.setKeyRepeatEnabled(true); // We want the user to be able to hold down keys
     Player player;
 
     while (window.isOpen())  //game loop
