@@ -6,7 +6,7 @@ Player::Player()
 {
     if (!texture.loadFromFile("graphics/custom/character.png"))
     {
-        std::cerr << "Exiting, resourses not found" << std::endl;
+        std::cerr << "Exiting, resources not found" << std::endl;
         abort();
     }
     
