@@ -1,5 +1,5 @@
 cd build/
-custom-cmake -G"Ninja" -DCMAKE_BUILD_TYPE="Debug" ..
-custom-cmake --build .
+cmake -G"Ninja" -DCMAKE_BUILD_TYPE="Debug" ..
+cmake --build .
 cd bin/
 ./Survivio
