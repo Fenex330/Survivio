@@ -18,3 +18,8 @@ void Player::defaultInit()
 
     Player::player_count++;
 }
+
+Player::~Player()
+{
+    Player::player_count--;
+}

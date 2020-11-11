@@ -8,7 +8,7 @@ class Player // Abstract Base Class for SuperPlayer, NetPlayer, BotPlayer
         sf::Sprite sprite;
         static unsigned int player_count;
 
-        virtual ~Player() {};
+        virtual ~Player();
         virtual void move (Map &map) = 0;
 
     protected:

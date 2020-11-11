@@ -7,11 +7,6 @@ SuperPlayer::SuperPlayer()
     defaultInit();
 }
 
-SuperPlayer::~SuperPlayer()
-{
-    Player::player_count--;
-}
-
 void SuperPlayer::move (Map &map)
 {
     int mul = surviv::default_player_speed; //multiply by speed coefficients
