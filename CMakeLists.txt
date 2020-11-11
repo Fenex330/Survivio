@@ -64,9 +64,9 @@ include_directories (SYSTEM ${SFML_INCLUDE_DIR})
 file (GLOB SRC_FILES "src/*.cpp")
 
 if (WIN32)
-    file (GLOB LIB_FILES "${CMAKE_CURRENT_BINARY_DIR}/bin/lib/*")
+    file (GLOB LIB_FILES "${SFML_LIBRARY_DIR}/*")
 else()
-    link_directories ("${CMAKE_CURRENT_BINARY_DIR}/bin/lib/")
+    link_directories ("${CMAKE_CURRENT_BINARY_DIR}/bin/lib")
 endif()
 
 add_executable (Survivio WIN32 ${SRC_FILES}) #remove WIN32 if you want to keep console logs on Windows
