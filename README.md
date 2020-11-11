@@ -45,9 +45,7 @@ At the moment, only Linux and Windows platforms are fully supported, MacOS suppo
         cmake .. && cmake --build .
 ```
 
-The folder "Survivio/build/bin" will contain all the binary files.
-
-Note that on windows, you must manualy move the dll files from "lib" folder to the binary root folder (bin) next to the executable <br><br>
+The folder "Survivio/build/bin" will contain all the binary files. <br><br>
 
 
 
