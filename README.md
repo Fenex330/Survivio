@@ -45,7 +45,7 @@ At the moment, only Linux and Windows platforms are fully supported, MacOS suppo
         cmake .. && cmake --build .
 ```
 
-The folder "Survivio/build/bin" will contain all the binary files. <br><br>
+The folder "Survivio/build/bin" will contain all the binary files. (Note on windows you should run *post-build.bat* script after cmake build) <br><br>
 
 
 
