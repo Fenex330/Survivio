@@ -73,7 +73,7 @@ add_executable (Survivio WIN32 ${SRC_FILES}) #remove WIN32 if you want to keep c
 
 if (WIN32)
     target_link_libraries (Survivio ${LIB_FILES})
-    add_custom_command(TARGET Survivio POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${SFML_LIBRARY_DIR}" $<TARGET_FILE_DIR:Survivio>)
+    add_custom_command(TARGET Survivio PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${SFML_LIBRARY_DIR}" $<TARGET_FILE_DIR:Survivio>)
     add_custom_command(TARGET Survivio POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/dependencies/SFML/windows/gcc-lib" $<TARGET_FILE_DIR:Survivio>)
 else()
     set_target_properties (Survivio PROPERTIES LINK_FLAGS "-Wl,-rpath,./lib")
