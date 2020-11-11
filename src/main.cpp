@@ -38,7 +38,7 @@ int main()
 
         //game logic
         player.move(map);
-        player.rotate();
+        player.rotate(window);
 
 
 
