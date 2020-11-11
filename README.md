@@ -47,8 +47,7 @@ At the moment, only Linux and Windows platforms are fully supported, MacOS suppo
 
 The folder "Survivio/build/bin" will contain all the binary files.
 
-Note that on windows, you must manualy move the dll files from "lib" folder to the binary root folder (bin) next to the executable
-and also add ***libgcc_s_dw2-1.dll, libstdc++-6.dll, libwinpthread-1.dll*** if building with minGW compiler. <br><br>
+Note that on windows, you must manualy move the dll files from "lib" folder to the binary root folder (bin) next to the executable <br><br>
 
 
 
