@@ -8,4 +8,5 @@ class SuperPlayer final : public Player
         SuperPlayer();
         virtual ~SuperPlayer() {};
         virtual void move (Map &map) override;
+        virtual void rotate() override;
 };

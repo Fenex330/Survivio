@@ -32,3 +32,8 @@ void SuperPlayer::move (Map &map)
         map.mainView.move (0 * mul, 1 * mul);
     }
 }
+
+void SuperPlayer::rotate()
+{
+    //
+}

@@ -15,8 +15,8 @@ int main()
 
     // Set Window Icon
     sf::Image icon;
-    icon.loadFromFile("graphics/logo/logo-surviv.png");
-    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+    icon.loadFromFile ("graphics/logo/logo-surviv.png");
+    window.setIcon (icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
     while (window.isOpen())  //Main Game Loop
     {
@@ -38,6 +38,7 @@ int main()
 
         //game logic
         player.move(map);
+        player.rotate();
 
 
 
