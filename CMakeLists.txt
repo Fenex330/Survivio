@@ -54,9 +54,7 @@ if (APPLE) # Mac OS needs the Frameworks and the libs
     file (COPY "dependencies/SFML/macOS/lib" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/bin")
     file (COPY "dependencies/SFML/macOS/Frameworks" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/bin")
 else()
-    if (NOT WIN32)
-        file (COPY "${SFML_LIBRARY_DIR}" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/bin")
-    endif()
+    file (COPY "${SFML_LIBRARY_DIR}" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/bin")
 endif()
 
 include_directories ("include")
@@ -64,7 +62,7 @@ include_directories (SYSTEM ${SFML_INCLUDE_DIR})
 file (GLOB SRC_FILES "src/*.cpp")
 
 if (WIN32)
-    file (GLOB LIB_FILES "${CMAKE_SOURCE_DIR}/dependencies/SFML/windows/lib/*")
+    file (GLOB LIB_FILES "${CMAKE_CURRENT_BINARY_DIR}/bin/lib/*")
 else()
     link_directories ("${CMAKE_CURRENT_BINARY_DIR}/bin/lib")
 endif()
@@ -73,7 +71,7 @@ add_executable (Survivio WIN32 ${SRC_FILES}) #remove WIN32 if you want to keep c
 
 if (WIN32)
     target_link_libraries (Survivio ${LIB_FILES})
-    add_custom_command(TARGET Survivio PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${SFML_LIBRARY_DIR}" $<TARGET_FILE_DIR:Survivio>)
+    add_custom_command(TARGET Survivio POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${SFML_LIBRARY_DIR}" $<TARGET_FILE_DIR:Survivio>)
     add_custom_command(TARGET Survivio POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/dependencies/SFML/windows/gcc-lib" $<TARGET_FILE_DIR:Survivio>)
 else()
     set_target_properties (Survivio PROPERTIES LINK_FLAGS "-Wl,-rpath,./lib")
