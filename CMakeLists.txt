@@ -64,7 +64,7 @@ include_directories (SYSTEM ${SFML_INCLUDE_DIR})
 file (GLOB SRC_FILES "src/*.cpp")
 
 if (WIN32)
-    file (GLOB LIB_FILES "${SFML_LIBRARY_DIR}/*")
+    file (GLOB LIB_FILES "${CMAKE_SOURCE_DIR}/dependencies/SFML/windows/lib/*")
 else()
     link_directories ("${CMAKE_CURRENT_BINARY_DIR}/bin/lib")
 endif()
