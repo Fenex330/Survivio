@@ -1,5 +1,4 @@
 #include <cmath>
-//#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Global.hpp"
 #include "SuperPlayer.hpp"
@@ -37,8 +36,11 @@ void SuperPlayer::move (Map &map)
 
 void SuperPlayer::rotate(const sf::RenderWindow &window)
 {
-    sf::Vector2i local_mouse_position = sf::Mouse::getPosition(window);
-    double rot = std::atan (local_mouse_position.y / local_mouse_position.x) * (180 / surviv::PI);
+    sf::Vector2i local_mouse_position = sf::Mouse::getPosition (window);
+    sf::Vector2f sprite_position = sprite.getPosition();
+
+    double distance = std::sqrt (std::pow ((sprite_position.x - local_mouse_position.x), 2) + std::pow ((sprite_position.x - local_mouse_position.x), 2));
+    double rot = std::acos ((local_mouse_position.y - surviv::view_dim_Y) / distance) * (180 / surviv::PI);
+
     sprite.setRotation (rot);
-    //std::cout << local_mouse_position.x << "  " << local_mouse_position.y << "    " << rot << std::endl;
 }
