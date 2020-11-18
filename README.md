@@ -5,7 +5,7 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/Fenex330/Survivio?style=flat-square)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Fenex330/Survivio?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Fenex330/Survivio?style=flat-square)
-![GitHub contributors](https://img.shields.io/github/contributors/Fenex330/Survivio)
+![GitHub contributors](https://img.shields.io/github/contributors/Fenex330/Survivio?style=flat-square)
 
 
 
