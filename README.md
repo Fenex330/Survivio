@@ -2,6 +2,10 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/Fenex330/Survivio?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Fenex330/Survivio?style=flat-square)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Fenex330/Survivio?style=flat-square)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/Fenex330/Survivio?style=flat-square)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Fenex330/Survivio?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Fenex330/Survivio?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/Fenex330/Survivio)
 
 
 
