@@ -1,3 +1,10 @@
+![GitHub](https://img.shields.io/github/license/Fenex330/Survivio)
+![GitHub top language](https://img.shields.io/github/languages/top/Fenex330/Survivio?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/Fenex330/Survivio)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Fenex330/Survivio?style=flat-square)
+
+
+
 # Table of contents
 
 * [About](#About)
