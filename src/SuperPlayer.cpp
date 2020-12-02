@@ -34,12 +34,9 @@ void SuperPlayer::move (Map &map)
     }
 }
 
-void SuperPlayer::rotate(const sf::RenderWindow &window)
+void SuperPlayer::rotate (const sf::RenderWindow &window)
 {
     sf::Vector2i mouse_position = sf::Mouse::getPosition (window);
-    sf::Vector2f sprite_position = sprite.getPosition();
-
     double rot = std::atan2 (mouse_position.y - surviv::view_dim_Y / 2, mouse_position.x - surviv::view_dim_X / 2) * (180 / surviv::PI) + 90;
-
     sprite.setRotation (rot);
 }

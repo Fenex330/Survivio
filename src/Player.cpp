@@ -16,6 +16,9 @@ void Player::defaultInit()
     texture.setRepeated (false);
     sprite.setTexture (texture);
 
+    sf::FloatRect boundingBox = sprite.getLocalBounds();
+    sprite.setOrigin (boundingBox.width / 2, boundingBox.height / 2);
+
     Player::player_count++;
 }
 
