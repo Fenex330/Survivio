@@ -1,26 +1,26 @@
-#add --verbose flag for detailed status log
-#add -DCMAKE_BUILD_TYPE="Debug" for development builds
-#add -G"Ninja" for ninja builds
-#change CMAKE_BUILD_PARALLEL_LEVEL and MULTITHREADED_BUILD to match the number of your cores/threads
+# add --verbose flag for detailed status log
+# add -DCMAKE_BUILD_TYPE="Debug" for development builds
+# add -G"Ninja" for ninja builds
+# change CMAKE_BUILD_PARALLEL_LEVEL and MULTITHREADED_BUILD to match the number of your cores/threads
 
 
 
-cmake_minimum_required (VERSION 3.18.0) #use the latest major version available
+cmake_minimum_required (VERSION 3.18.0) # use the latest major version available
 
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
     message(FATAL_ERROR "FATAL: In-source builds are not allowed. You should create a separate directory for build files.")
 endif()
 
-#set (CMAKE_C_COMPILER "clang") #or gcc
-#set (CMAKE_CXX_COMPILER "clang++") #or g++
+#set (CMAKE_C_COMPILER "clang") # or gcc
+#set (CMAKE_CXX_COMPILER "clang++") # or g++
 
 project (Survivio)
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_CXX_EXTENSIONS OFF)
-set (CMAKE_BUILD_PARALLEL_LEVEL 8)
-set (MULTITHREADED_BUILD 8)
+#set (CMAKE_BUILD_PARALLEL_LEVEL 8)
+#set (MULTITHREADED_BUILD 8)
 set (EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
 if (NOT CMAKE_BUILD_TYPE)
@@ -38,8 +38,8 @@ if (APPLE)
     set (SFML_LIBRARY_DIR "dependencies/SFML/macOS/lib")
 endif()
 
-if (UNIX AND NOT APPLE) #LINUX
-    set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra") #-Weffc++
+if (UNIX AND NOT APPLE) # LINUX
+    set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra") # -Weffc++
     set (SFML_INCLUDE_DIR "dependencies/SFML/linux/include")
     set (SFML_LIBRARY_DIR "dependencies/SFML/linux/lib")
 endif()
@@ -67,7 +67,7 @@ else()
     link_directories ("${CMAKE_CURRENT_BINARY_DIR}/bin/lib")
 endif()
 
-add_executable (Survivio WIN32 ${SRC_FILES}) #remove WIN32 if you want to keep console logs on Windows
+add_executable (Survivio WIN32 ${SRC_FILES}) # remove WIN32 if you want to keep console logs on Windows
 
 if (WIN32)
     target_link_libraries (Survivio ${LIB_FILES})

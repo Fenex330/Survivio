@@ -8,5 +8,5 @@ class SuperPlayer final : public Player
         SuperPlayer();
         virtual ~SuperPlayer() {};
         virtual void move (Map &map) override;
-        virtual void rotate(const sf::RenderWindow &window) override;
+        virtual void rotate (const sf::RenderWindow &window) override;
 };

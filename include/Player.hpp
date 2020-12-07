@@ -10,7 +10,7 @@ class Player // Abstract Base Class for SuperPlayer, NetPlayer, BotPlayer
 
         virtual ~Player();
         virtual void move (Map &map) = 0;
-        virtual void rotate(const sf::RenderWindow &window) = 0;
+        virtual void rotate (const sf::RenderWindow &window) = 0;
 
     protected:
         void defaultInit();
