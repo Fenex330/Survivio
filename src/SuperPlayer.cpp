@@ -10,7 +10,7 @@ SuperPlayer::SuperPlayer()
 
 void SuperPlayer::move (Map &map)
 {
-    int mul = surviv::default_player_speed; //multiply by speed coefficients
+    int mul = surviv::DEFAULT_PLAYER_SPEED; //multiply by speed coefficients
 
     if (sf::Keyboard::isKeyPressed (sf::Keyboard::D))
     {
@@ -37,6 +37,6 @@ void SuperPlayer::move (Map &map)
 void SuperPlayer::rotate (const sf::RenderWindow &window)
 {
     sf::Vector2i mouse_position = sf::Mouse::getPosition (window);
-    double rot = std::atan2 (mouse_position.y - surviv::view_dim_Y / 2, mouse_position.x - surviv::view_dim_X / 2) * (180 / surviv::PI) + 90;
+    double rot = std::atan2 (mouse_position.y - surviv::VIEW_DIM_Y / 2, mouse_position.x - surviv::VIEW_DIM_X / 2) * (180 / surviv::PI) + 90;
     sprite.setRotation (rot);
 }

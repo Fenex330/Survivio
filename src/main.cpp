@@ -6,7 +6,7 @@
 
 int main()
 {
-    sf::RenderWindow window (sf::VideoMode (surviv::view_dim_X, surviv::view_dim_Y), "Main Menu");
+    sf::RenderWindow window (sf::VideoMode (surviv::VIEW_DIM_X, surviv::VIEW_DIM_Y), "Main Menu");
     SuperPlayer player;
     Map map;
 

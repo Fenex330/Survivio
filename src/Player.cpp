@@ -18,7 +18,7 @@ void Player::defaultInit()
     sprite.setTexture (texture);
 
     sf::FloatRect boundingBox = sprite.getLocalBounds();
-    sprite.setOrigin (boundingBox.width / 2, boundingBox.height / 2 + surviv::player_origin_offset);
+    sprite.setOrigin (boundingBox.width / 2, boundingBox.height / 2 + surviv::PLAYER_ORIGIN_OFFSET);
 
     Player::player_count++;
 }

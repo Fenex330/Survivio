@@ -6,7 +6,7 @@
 Map::Map()
 {
     mainView.setCenter (sf::Vector2f (0, 0));
-    mainView.setSize (sf::Vector2f (surviv::view_dim_X, surviv::view_dim_Y));
+    mainView.setSize (sf::Vector2f (surviv::VIEW_DIM_X, surviv::VIEW_DIM_Y));
 
     defaultInit();
 }
