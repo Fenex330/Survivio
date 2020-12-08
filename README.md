@@ -37,7 +37,7 @@ At the moment, only Linux and Windows platforms are fully supported, MacOS suppo
 
 
 2. Install the latest version of [Cmake](https://cmake.org/download/)
-   and any corresponding build tool + compiler (see list of supported below)
+   and any corresponding build tool + compiler (see list of supported below) (should at least support C++17 standard)
 
 
 3. In the terminal write (to clone the repository on your computer): <br>
