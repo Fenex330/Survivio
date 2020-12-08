@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Global.hpp"
 #include "Player.hpp"
 
 unsigned int Player::player_count = 0;
@@ -17,7 +18,7 @@ void Player::defaultInit()
     sprite.setTexture (texture);
 
     sf::FloatRect boundingBox = sprite.getLocalBounds();
-    sprite.setOrigin (boundingBox.width / 2, boundingBox.height / 2);
+    sprite.setOrigin (boundingBox.width / 2, boundingBox.height / 2 + surviv::player_origin_offset);
 
     Player::player_count++;
 }
