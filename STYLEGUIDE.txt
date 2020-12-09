@@ -13,7 +13,7 @@
    variable = snake_case
    function = camelCase
    class = PascalCase
-   namespace = lowercase
+   namespace = flatcase
 
 3) opening and closing of round ( ) brackets should have a space separation
    from a corresponding function or an expression, unless it is empty.
