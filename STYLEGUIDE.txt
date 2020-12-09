@@ -8,7 +8,7 @@
     other custom created "includes"
     definition of corresponding current file implementation "include"
 
-2) define = __CASE__
+2) macro = __MACRO_CASE__
    constant = SCREAMING_SNAKE_CASE
    variable = snake_case
    function = camelCase
