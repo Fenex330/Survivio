@@ -51,7 +51,7 @@
 
 15) a use of constants is prefered over magic numbers
 
-16) math operators should be surrounded by spaces
+16) math and logical operators should normally be surrounded by spaces
 
 17) all comments and code should be written in english
 
