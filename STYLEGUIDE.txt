@@ -1,0 +1,60 @@
+1) header files order:
+    include guard
+
+    std <includes>
+    system installed libraries <includes>
+    "Global.hpp"
+    locally installed libraries "includes"
+    other custom created "includes"
+    definition of corresponding current file implementation "include"
+
+2) define = __CASE__
+   constant = SCREAMING_SNAKE_CASE
+   variable = snake_case
+   function = camelCase
+   class = PascalCase
+   namespace = lowercase
+
+3) opening and closing of round ( ) brackets should have a space separation
+   from a corresponding function or an expression, unless it is empty.
+   Example:
+      foo();
+      foo (var1, var2);
+
+4) C files should have extentions either .c or .h
+   C++ files should have extentions either .cpp or .hpp
+
+5) curly bracket openings should be placed on the next line to it's statement
+
+6) a class should be declared in a header file and defined in a source file
+   where the name of the files match the name of the class
+
+7) 4 spaces should be used instead of tabs
+
+8) global variables should always be referred to using :: operator (::global_foo++;)
+
+9) iterator variables should be called i, j, k etc.
+
+10) prefix "is" should be used for boolean variables and methods
+
+11) every header file must contain an include guard ("#pragma once" prefered)
+
+12) variables should be initialized and used as close as possible to where they are declared
+    and have smallest possible scope;
+
+13) use of global variables should be minimized
+
+14) pointers and references should have their symbols next to the type rather than to the name
+    Example:
+      int* foo;
+      int& foo;
+
+15) a use of constants is prefered over magic numbers
+
+16) math operators should be surrounded by spaces
+
+17) all comments and code should be written in english
+
+18) UTF-8 encoding should be used
+
+n) any violation to this guide is allowed if it enhances readability
