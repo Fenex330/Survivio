@@ -1,5 +1,5 @@
 @echo off
 cd build\bin\lib
-mv *.dll ..
+move *.dll ..
 cd ..
 rmdir lib
